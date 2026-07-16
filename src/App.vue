@@ -1,6 +1,8 @@
 <!-- My todolist -->
 <template>
 
+  <Watch></Watch>
+
   <Layout>
     <template v-slot:header>
       <h1>Accueil</h1>
@@ -86,6 +88,8 @@
 import { ref, computed, onMounted } from 'vue'
 import FirstVue from './FirstVue.vue'
 import Layout from './Layout.vue'
+import Watch from './Watch.vue'
+
 const posts = ref([])
 onMounted(() => {
   fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
